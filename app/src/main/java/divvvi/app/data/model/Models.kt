@@ -1,4 +1,4 @@
-package com.divvvi.app.data.model
+package divvvi.app.data.model
 
 import com.google.firebase.Timestamp
 

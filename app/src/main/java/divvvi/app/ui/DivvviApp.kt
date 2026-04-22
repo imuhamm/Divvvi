@@ -1,4 +1,4 @@
-package com.divvvi.app.ui
+package divvvi.app.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
@@ -7,13 +7,13 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.divvvi.app.ui.screens.AssignScreen
-import com.divvvi.app.ui.screens.ConfirmScreen
-import com.divvvi.app.ui.screens.GroupScreen
-import com.divvvi.app.ui.screens.HistoryScreen
-import com.divvvi.app.ui.screens.ReviewScreen
-import com.divvvi.app.ui.screens.ScanScreen
-import com.divvvi.app.ui.screens.SplashScreen
+import divvvi.app.ui.screens.AssignScreen
+import divvvi.app.ui.screens.ConfirmScreen
+import divvvi.app.ui.screens.GroupScreen
+import divvvi.app.ui.screens.HistoryScreen
+import divvvi.app.ui.screens.ReviewScreen
+import divvvi.app.ui.screens.ScanScreen
+import divvvi.app.ui.screens.SplashScreen
 
 object Routes {
     const val SPLASH = "splash"

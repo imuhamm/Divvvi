@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.divvvi.app"
+    namespace = "divvvi.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.divvvi.app"
+        applicationId = "divvvi.app"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

@@ -1,4 +1,4 @@
-package com.divvvi.app.ui.screens
+package divvvi.app.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,7 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.divvvi.app.ui.Routes
+import divvvi.app.ui.Routes
 
 @Composable
 private fun Stub(title: String, nav: NavController, nextRoute: String?, nextLabel: String = "Next") {

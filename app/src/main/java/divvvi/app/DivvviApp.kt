@@ -1,4 +1,4 @@
-package com.divvvi.app
+package divvvi.app
 
 import android.app.Application
 

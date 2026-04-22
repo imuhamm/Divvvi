@@ -1,4 +1,4 @@
-package com.divvvi.app.ui.theme
+package divvvi.app.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
