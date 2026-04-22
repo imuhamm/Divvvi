@@ -22,7 +22,7 @@ Divvvi is the fastest way to go from a receipt → a fair split among roommates 
 | Language / UI | Kotlin + Jetpack Compose | Modern Android default; declarative style maps well to design tools |
 | Architecture | MVVM + Repository | Standard, well-documented |
 | Min SDK / Target | 26 / 35 | Broad device coverage |
-| Backend | Firebase (Auth + Firestore + Storage) | Generous free tier, no server code |
+| Backend | Firebase (Auth + Firestore) | Free Spark plan; no server code. Storage skipped — it now requires the paid Blaze plan to enable |
 | Auth | Firebase Anonymous Auth + display name | "Quick signup" with zero friction |
 | OCR | **Google ML Kit Text Recognition (on-device)** | 100% free, unlimited, no API key, no quota — runs locally on the phone |
 | Camera | CameraX | Google's official camera library |
@@ -51,8 +51,9 @@ groups/{groupId}/members/{userId}
 groups/{groupId}/entries/{entryId}
   createdAt: Timestamp
   createdBy: userId
-  receiptImageUrl: String?
   total: Double?
+  // receipt image not persisted — OCR runs locally and the image is discarded
+  // (Firebase Storage requires the paid Blaze plan to enable)
 
 groups/{groupId}/entries/{entryId}/items/{itemId}
   name: String
@@ -76,9 +77,10 @@ users/{userId}/itemHistory/{normalizedItemName}
 
 **User to do:**
 1. Create a Firebase project at console.firebase.google.com (free Spark plan)
-2. Add Android app with package `com.divvvi.app`
+2. Add Android app with package `divvvi.app`
 3. Download `google-services.json` → drop into `app/`
 4. Enable **Anonymous Auth** and **Firestore** in the Firebase console
+   (Storage is *not* required — it now needs the paid Blaze plan to enable, and the MVP does not persist receipt images)
 
 ### M1 — Group Management (2–3 days)
 - Anonymous auth on first launch

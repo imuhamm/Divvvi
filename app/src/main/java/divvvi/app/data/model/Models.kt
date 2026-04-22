@@ -22,7 +22,6 @@ data class Entry(
     val groupId: String = "",
     val createdAt: Timestamp? = null,
     val createdBy: String = "",
-    val receiptImageUrl: String? = null,
     val total: Double? = null,
 )
 

@@ -12,7 +12,7 @@ Status: **MVP in development** — see [plan.md](plan.md) for milestones.
 ## Stack
 
 - **Kotlin** + **Jetpack Compose** (min SDK 26, target 35)
-- **Firebase** — Anonymous Auth, Firestore, Storage (free tier)
+- **Firebase** — Anonymous Auth, Firestore (free Spark plan; Storage intentionally not used)
 - **ML Kit Text Recognition** — on-device OCR, free and unlimited
 - **CameraX** for capture
 - **Coil** for images
@@ -31,12 +31,13 @@ See [plan.md](plan.md) for the full data model, milestones, and technical ration
 
 ### Firebase setup (required before first run)
 1. Create a project at [console.firebase.google.com](https://console.firebase.google.com) on the free Spark plan.
-2. Add an Android app with package name `com.divvvi.app`.
+2. Add an Android app with package name `divvvi.app`.
 3. Download `google-services.json` and place it in `app/` — this file is gitignored.
 4. In the Firebase console, enable:
    - **Authentication → Sign-in method → Anonymous**
    - **Firestore Database** (start in test mode for local dev)
-   - **Storage** (for optional receipt image upload)
+
+> Storage is intentionally not used — it now requires the paid Blaze plan to enable, and the MVP performs OCR on-device without persisting receipt images.
 
 ### Build & run
 ```bash
